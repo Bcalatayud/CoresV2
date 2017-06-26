@@ -201,13 +201,30 @@ function subir() {
     texto = "";
     //vb = true;
     var aux = [];
+    var Sexo = [];
+	var Edad= [];
+	var Profesion = [];
+	var Orientacion= [];
+	var Cp = [];
+	var Lengua= [];
+	var Escolaridad = [];
+	var Parientes= [];
+	aux.push(document.getElementById("iduserk").value);
     for (i = 0; i < usuarios.length; i++) {
-        aux.push(document.getElementById("userres" + i).value);
+		Sexo.push($('input[name="userrd' + i + '"]:checked').val());
+		Edad.push(document.getElementById("usered" + i).value);
+		Profesion.push(document.getElementById("userpro" + i).value);
+		Orientacion.push(document.getElementById("userori" + i).value);
+		Cp.push(document.getElementById("userres" + i).value);
+		Lengua.push(document.getElementById("userlen" + i).value);
+		Escolaridad.push(document.getElementById("usersch" + i).value);
+		Parientes.push(document.getElementById("userpar" + i).value);
     } 
     for(h = 0; h < usuarios.length; h++) {
             validaCP(h, false);
     }
     //while (vb) {
+	alert("Sexo de los usuarios: "+ Sexo + "\nEdad de los usuarios: " + Edad + "\nProfesión de los usuarios: " + Profesion + "\nOrientación sexual de los usuarios: " + Orientacion + "\nCódigo porstal de los usuarios: " + Cp + "\nLengua materna de los usuarios: " + Lengua + "\n" + "Escolaridad de los usuarios: " + Escolaridad + "\nRelación de parentesco: " + Parientes);
 	alert("Se validarán sus datos");
         //if(magic === usuarios.length){ 
 		//vb = false;
