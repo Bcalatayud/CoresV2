@@ -84,20 +84,22 @@ function getComboOrientacion(j) {
 function changeRelacion(){
     parientes = ["Seleccionar", "Amigos", "Familiar", "Compañeros de trabajo", "Compañeros de escuela", "Vecinos"];
 }
-var usuarioPersonal = "";
 
+var usuarioPersonal = "";
 function accion(){
     var lineas = separarLineas(document.getElementById("conversacion").value + "\n");
     usuarios = identificarUsuarios(lineas);
     correcto = false;
     avanza = 0;
     while (!correcto) {
-        correcto = confirm("¿Eres " + usuarios[avanza] + "?");
+        correcto = confirm("¿Eres " + usuarios[avanza] + "?"); //Muestra una ventana emergente para seleccionar al usuario que hablar/registra la conversación. 
         usuarioPersonal = avanza;
         avanza++;
         if(avanza > usuarios.length-1)
-            avanza = 0;
-    }
+            avanza = 0; //Para mantener el valor dentro de el ciclo, hasta que seleccione uno de los usuarios.
+    } //El valor de correcto, para terminar el ciclo se actualiza con el "confirm" de la primera linea 
+	
+	
     //var conversacion = Object();
     if (usuarios.length > 2)
         changeRelacion();
@@ -327,27 +329,27 @@ function separarLineas(texto){
 }
 function identificarUsuarios(lineas) {
     usuarios = [];
+	var cjto = new Set();
     for (i = 0; i < lineas.length; i++){
 		//re = /..\d.\d{2}.(AM|PM)..\d.\d{2}.\d{4}..(.*):.*/; //Expresión regular anterior
 		//[11:11 am, 11/11/1111] : NOMBRE A RESCATAR
 		
 		//Nueva expresión regular
-		re = /.\d{2}.\d{2}..\d.\d.\d{4}..(.*):.*/;
+		re = /.\d{2}.\d{2}..\d+.\d+.\d{4}..(.*?):.*/;
 		//v.g. [11:20, 7/6/2017] NOMBRE: MENSAJE
-		alert(re);
-        if (re.test(lineas[i-2])){
-			//var newstr = lineas.replace(re, "$2");
-            if (i > 0 && i < lineas.length) {
-				var newstr = lineas[i-1].replace(re, "$1");
-                if(lineas[i-1] == lineas[i+1]){
-					
-                    if(usuarios.indexOf(lineas[i-1]) == -1)
-			        usuarios.push(newstr);
-                }
-				//APARECE MÁS VECES DE LAS QUE DEBERÍA
-            }   
-        }
+		//v.g. [09:11, 15/6/2017] Lore: y ya pedimos pizza
+		var prueba = lineas[i].replace(re,"$1");
+		
+		//alert("Iteración "+i + "\nLinea completa: "+lineas[i]+ "\nUsuario: "+prueba);
+		
+		cjto.add(prueba);
     }
+	cjto.forEach (function(item){
+		usuarios.push(item);
+	});
+	alert("Tamañao del conjunto: "+cjto.size);
+	//console.log(cjto);
+	alert("Tamaño de usuarios: "+usuarios)
     return usuarios;
 }
 function generarLlave(){
