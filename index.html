@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en-ES"  class="no-js">
+    <head>
+        <meta charset="UTF-8">        <title>CORES</title>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="funciones.js"></script>
+        <meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" href="css/foundation.css" />
+    	<script src="js/vendor/modernizr.js"></script>
+    </head>
+	
+    <body>
+        
+        <nav class="top-bar" data-topbar>
+ 			<ul class="title-area">          
+				<li class="name">
+              	<h1>
+                	<a href="http://www.corpus.unam.mx/cores/index.html">
+                  		CORES
+                	</a>
+              	</h1>
+            	</li>
+            	<li class="toggle-topbar menu-icon">
+					<a href="#">
+						<span>
+							menu
+						</span>
+					</a>
+				</li>
+          	</ul>
+          	<section class="top-bar-section">
+          	</section>
+        </nav>
+       
+        <form id="todo" method="POST" action="insertar.php">
+			<div class="row">
+			  <div class="large-6 columns">
+				  <input type="hidden" id="cara" name="caracteristicas" value="" />
+				  <input type="hidden" id="conv" name="conversacion2" value="" />
+				  <input type="hidden" id="conv2" name="conversacion3" value="" />
+				  <input type="hidden" id="numero" name="num" value="" />
+				  <input type="hidden" id="usuarioPersonal" name="personalUser" value="" />
+				  <p>
+					  Ingresa tu cadena única o 
+					  <a href="#" onclick="generarLlave();">genera una nueva</a>:
+					  <br>
+					  <input type="text" id="unico" name="unic">
+				  </p>
+				  	  Conversación de WhatsApp 
+				  	  <a href="https://web.whatsapp.com" target="_blank">Link para obtenerlas</a>: 
+					  <textarea id="conversacion" name="whole" style="height: 400px;"></textarea>
+					  <a href="#" class="button" onclick="accion()">Aportar datos</a>
+			  </div>
+		   	  <div class="large-6 columns">
+				  <div id="contenido">
+				  </div>
+			  </div>
+			</div>
+        </form>
+		
+        <script>
+			document.write('<script src=js/vendor/' +
+			('__proto__' in {} ? 'zepto' : 'jquery') +
+        	'.js><\/script>')
+        </script>
+		
+        <script src="js/foundation.min.js">
+		</script>
+		
+        <script>
+			$(document).foundation();
+        </script>
+       
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-ES">
+    <head>
+        <meta charset="UTF-8">        <title>CORES</title>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="funciones.js"></script>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    </head>
+    <body onload="setIteracion()">
+    <nav class="top-bar" data-topbar>
+          <ul class="title-area">
+             
+            <li class="name">
+              <h1>
+                <a href="http://www.corpus.unam.mx/cores/index.html">
+                  CORES
+                </a>
+              </h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+          </ul>
+       
+          <section class="top-bar-section">
+             
+            
+          </section>
+        </nav>
+        <form id="todo" method="post" action="consultar.php">
+            <input type="hidden" id="query" name="cadena" value="" />
+            <input type="hidden" id="tipo" name="tip" value="" />
+            <input type="hidden" id="numero" name="num" value="" />
+            <p id = "extra"></p>
+            <div id = "contenido">
+            
+            </div>
+        </form>
+        
+        <script>
+        document.write('<script src=js/vendor/' +
+        ('__proto__' in {} ? 'zepto' : 'jquery') +
+        '.js><\/script>')
+        </script>
+        <script src="js/foundation.min.js"></script>
+        <script>
+          $(document).foundation();
+        </script>
+    </body>
+</html>
