@@ -1,8 +1,8 @@
 var edades = ["Seleccionar", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"];
-var idiomas = ["Seleccionar", "Akan", "Amharic", "Arabic", "Assamese", "Awadhi", "Azerbaijani", "Balochi", "Belarusian", "Bengali", "Bhojpuri", "Burmese", "CebuanoVisayan", "Chewa", "Chhattisgarhi", "Chittagonian", "Czech", "Deccan", "Dhundhari", "Dutch", "EasternMin","English", "French", "Fula", "GanChinese", "German", "Greek", "Gujarati", "HaitianCreole", "Hakka", "Haryanvi", "Hausa", "Hiligaynon", "Hindi", "Hmong", "Hungarian", "Igbo", "Ilocano", "Italian", "Japanese", "Javanese", "Jin", "Kannada", "Kazakh", "Khmer", "Kinyarwanda", "Kirundi", "Konkani", "Korean", "Kurdish", "Madurese", "Magahi", "Maithili", "Malagasy", "MalayIndonesian", "Malayalam", "Mandarin", "Marathi", "Marwari", "Mossi", "Nepali", "NorthernMin", "OdiaOriya", "Oromo", "Pashto", "Persian", "Polish", "Portuguese", "Punjabi", "Quechua", "Romanian", "Russian", "Saraiki", "SerboCroatian", "Shona", "Sindhi", "Sinhalese", "Somali", "SouthernMin", "Spanish", "Sundanese", "Swedish", "Sylheti", "Tagalog", "Tamil", "Telugu", "Thai", "Total", "Turkish", "Turkmen", "Ukrainian", "Urdu", "Uyghur", "Uzbek", "Vietnamese", "WuShanghainese", "Xhosa", "XiangHunnanese", "Yoruba", "YueCantonese", "Zhuang", "Zulu", "Aguacateco(Awakateko)", "Amuzgo", "Amuzgo de Guerrero", "Amuzgo de Oaxaca ", "Ayapaneco", "Cakchiquel(Kaqchikel)", "Chatino", "Chichimeca jonaz", "Chinanteco", "Chinanteco de Lalana", "Chinanteco de Ojitlán", "Chinanteco de Petlapa", "Chinanteco de Sochiapan", "Chinanteco de Usila", "Chinanteco de Valle Nacional", "Chocho (Chocholteco)", "Chol (Chol)", "Chontal", "Chontal de Oaxaca", "Chontal deTabasco", "Chuj", "Cochimí", "Cora", "Cucapá", "Cuicateco", "Guarijío", "Huasteco", "Huave", "Huichol", "Ixcateco", "Ixil", "Jacalteco (Jakalteko)", "Kanjobal (Qanjobal)", "Kekchi (Qeqchi)", "Kikapú (Kickapoo)", "Kiliwa", "Kumiai", "Lacandón", "Mame (Mam)", "Matlatzinca", "Maya", "Mayo", "Mazahua", "Mazateco", "Mixe","Mixteco", "Mixteco de la costa", "Mixteco de la mixteca alta", "Mixteco de la mixteca baja", "Mixteco de la zona mazateca", "Mixteco de Puebla", "Motocintleco(Qatok)", "Náhuatl", "Ocuilteco (Tlahuica)", "Otomí", "Paipai", "Pame", "Papabuco", "Pápago", "Pima", "Popoloca", "Popoluca", "Popoluca de la sierra", "Popoluca de Oluta", "Popoluca de Texistepec", "Purépecha (Tarasco)", "Quiché (Kiche)", "Seri", "Solteco", "Tacuate", "Tarahumara", "Tepehua", "Tepehuano", "Tepehuano de Chihuahua (Tepehuano del norte)", "Tepehuano de Durango (Tepehuano del sur)", "Tlapaneco", "Tojolabal", "Totonaca (Totonaco)", "Triqui", "Tzeltal (Tseltal)", "Tzotzil (Tsotsil)", "Yaqui", "Zapoteco", "Zapoteco de Ixtlán", "Zapoteco del Istmo", "Zapoteco del rincón", "Zapoteco sureño", "Zapoteco vallista", "Zoque "];
+var idiomas = ["Seleccionar", "Akan", "Amharic", "Arabic", "Assamese", "Awadhi", "Azerbaijani", "Balochi", "Belarusian", "Bengali", "Bhojpuri", "Burmese", "CebuanoVisayan", "Chewa", "Chhattisgarhi", "Chittagonian", "Czech", "Deccan", "Dhundhari", "Dutch", "EasternMin", "English", "French", "Fula", "GanChinese", "German", "Greek", "Gujarati", "HaitianCreole", "Hakka", "Haryanvi", "Hausa", "Hiligaynon", "Hindi", "Hmong", "Hungarian", "Igbo", "Ilocano", "Italian", "Japanese", "Javanese", "Jin", "Kannada", "Kazakh", "Khmer", "Kinyarwanda", "Kirundi", "Konkani", "Korean", "Kurdish", "Madurese", "Magahi", "Maithili", "Malagasy", "MalayIndonesian", "Malayalam", "Mandarin", "Marathi", "Marwari", "Mossi", "Nepali", "NorthernMin", "OdiaOriya", "Oromo", "Pashto", "Persian", "Polish", "Portuguese", "Punjabi", "Quechua", "Romanian", "Russian", "Saraiki", "SerboCroatian", "Shona", "Sindhi", "Sinhalese", "Somali", "SouthernMin", "Spanish", "Sundanese", "Swedish", "Sylheti", "Tagalog", "Tamil", "Telugu", "Thai", "Total", "Turkish", "Turkmen", "Ukrainian", "Urdu", "Uyghur", "Uzbek", "Vietnamese", "WuShanghainese", "Xhosa", "XiangHunnanese", "Yoruba", "YueCantonese", "Zhuang", "Zulu", "Aguacateco(Awakateko)", "Amuzgo", "Amuzgo de Guerrero", "Amuzgo de Oaxaca ", "Ayapaneco", "Cakchiquel(Kaqchikel)", "Chatino", "Chichimeca jonaz", "Chinanteco", "Chinanteco de Lalana", "Chinanteco de Ojitlán", "Chinanteco de Petlapa", "Chinanteco de Sochiapan", "Chinanteco de Usila", "Chinanteco de Valle Nacional", "Chocho (Chocholteco)", "Chol (Chol)", "Chontal", "Chontal de Oaxaca", "Chontal deTabasco", "Chuj", "Cochimí", "Cora", "Cucapá", "Cuicateco", "Guarijío", "Huasteco", "Huave", "Huichol", "Ixcateco", "Ixil", "Jacalteco (Jakalteko)", "Kanjobal (Qanjobal)", "Kekchi (Qeqchi)", "Kikapú (Kickapoo)", "Kiliwa", "Kumiai", "Lacandón", "Mame (Mam)", "Matlatzinca", "Maya", "Mayo", "Mazahua", "Mazateco", "Mixe", "Mixteco", "Mixteco de la costa", "Mixteco de la mixteca alta", "Mixteco de la mixteca baja", "Mixteco de la zona mazateca", "Mixteco de Puebla", "Motocintleco(Qatok)", "Náhuatl", "Ocuilteco (Tlahuica)", "Otomí", "Paipai", "Pame", "Papabuco", "Pápago", "Pima", "Popoloca", "Popoluca", "Popoluca de la sierra", "Popoluca de Oluta", "Popoluca de Texistepec", "Purépecha (Tarasco)", "Quiché (Kiche)", "Seri", "Solteco", "Tacuate", "Tarahumara", "Tepehua", "Tepehuano", "Tepehuano de Chihuahua (Tepehuano del norte)", "Tepehuano de Durango (Tepehuano del sur)", "Tlapaneco", "Tojolabal", "Totonaca (Totonaco)", "Triqui", "Tzeltal (Tseltal)", "Tzotzil (Tsotsil)", "Yaqui", "Zapoteco", "Zapoteco de Ixtlán", "Zapoteco del Istmo", "Zapoteco del rincón", "Zapoteco sureño", "Zapoteco vallista", "Zoque "];
 var parientes = ["Seleccionar", "Madre / Padre", "Hermano(a)", "Hijo(a)", "Abuelo(a)", "Nieto(a)", "Tío(a)", "Novio(a)", "Amigo(a)", "Primo(a)", "Esposo(a)", "Otro"];
 var educacion = ["Seleccionar", "Primaria", "Secundaria", "Preparatoria", "Universidad", "Maestría", "Doctorado"];
-var profesiones = ["Seleccionar", "Abogado", "Académico", "Actor", "Adjunto", "Administrador", "Administrativo", "Agente de viaje", "Agrónomo", "Alergólogo", "Alergista", "Almacenista", "Anatomista", "Anestesiólogo", "Anestesista", "Antologista", "Antropólogo", "Archivero", "Arqueólogo", "Arquitecto", "Asesor", "Asistente", "Astrofísico", "Astrólogo","Astrónomo", "Atleta", "Autor", "Auxiliar", "Avicultor", "Bacteriólogo", "Barrendero", "Bibliógrafo", "Bibliotecario", "Biofísico", "Biógrafo", "Biólogo", "Bioquímico", "Bombero", "Botánico", "Cancerólogo", "Cardiólogo", "Cartero", "Cartógrafo", "Castrador", "Catedrático", "Científico", "Cirujano", "Citólogo", "Climatólogo", "Consejero", "Conserje", "Contador", "Coordinador", "Cosmógrafo", "Cosmólogo", "Criminalista", "Cronólogo", "Decano", "Decorador", "Defensor", "Delegado", "Demógrafo", "Dentista", "Dermatólogo", "Dibujante", "Diseñador", "Directivo", "Director", "Dirigente", "Doctor", "Documentalista", "Ecólogo", "Economista", "Educador", "Enfermero", "Entomólogo", "Epidemiólogo", "Estadista", "Estudiante", "Etimólogo","Etnógrafo", "Etnólogo", "Examinador", "Farmacéutico", "Farmacólogo", "Filólogo", "Filósofo", "Fiscal", "Físico", "Fisiólogo", "Fisioterapeuta", "Fonetista", "Foníatra", "Fonólogo", "Forense", "Fotógrafo", "Funcionario", "Gemólogo", "Genetista", "Geobotánica", "Geofísico", "Geógrafo", "Geólogo", "Geoquímica", "Gerente", "Gestor", "Grabador", "Grafólogo", "Gramático", "Hematólogo", "Hepatólogo", "Hidrogeólogo", "Hidrógrafo", "Hidrólogo", "Higienista", "Hispanista", "Historiador", "Informático", "Ingeniero", "Inmunólogo", "Inspector", "Interino", "Interventor", "Investigador", "Jardinero", "Juez", "Latinista", "Lexicógrafo", "Lexicólogo", "Lingüista", "Maestro", "Matemático", "Medico", "Meteorólogo", "Micólogo","Microbiológico", "Microcirujano", "Mineralogista", "Monitor", "Musicólogo", "Naturópata", "Nefrólogo", "Neumólogo", "Neuroanatomista", "Neurobiólogo", "Neurocirujano", "Neuroembriólogo", "Neurofisiólogo", "Neurólogo", "Nutrólogo", "Oceanógrafo", "Odontólogo", "Oficinista", "Oftalmólogo", "Oncólogo", "Óptico", "Optometrista", "Orientador", "Ornitólogo", "Ortopédico", "Ortopedista", "Osteólogo", "Otorrinolaringólogo", "Paleobiólogo", "Paleobotánico", "Paleógrafo", "Paleólogo", "Paleontólogo", "Patólogo", "Pedagogo", "Pediatra", "Periodista", "Perito", "Piloto", "Piscicultor", "Podólogo", "Policía", "Político", "Portero", "Prehistoriador", "Proctólogo", "Profesor", "Programador", "Protésico", "Proveedor", "Psicoanalista", "Psicólogo", "Psicofísico", "Psicopedagogo", "Psicoterapeuta", "Psiquiatra", "Publicista", "Publicitario", "Puericultor", "Químico", "Quiropráctico","Radioastrónomo", "Radiofonista", "Radiólogo", "Radiotécnico", "Radiotelefonista", "Radiotelegrafista", "Radioterapeuta", "Rector", "Sanitario", "Secretario", "Sexólogo", "Sismólogo", "Sociólogo", "Telefonista", "Teólogo", "Terapeuta", "Tocoginecólogo", "Tocólogo", "Toxicólogo", "Traductor", "Transcriptor", "Traumatólogo", "Tutor", "Urólogo", "Veterinario", "Virólogo", "Viticultor", "Vulcanólogo", "Xilógrafo", "Zoólogo", "Zootécnico"];
+var profesiones = ["Seleccionar", "Abogado", "Académico", "Actor", "Adjunto", "Administrador", "Administrativo", "Agente de viaje", "Agrónomo", "Alergólogo", "Alergista", "Almacenista", "Anatomista", "Anestesiólogo", "Anestesista", "Antologista", "Antropólogo", "Archivero", "Arqueólogo", "Arquitecto", "Asesor", "Asistente", "Astrofísico", "Astrólogo", "Astrónomo", "Atleta", "Autor", "Auxiliar", "Avicultor", "Bacteriólogo", "Barrendero", "Bibliógrafo", "Bibliotecario", "Biofísico", "Biógrafo", "Biólogo", "Bioquímico", "Bombero", "Botánico", "Cancerólogo", "Cardiólogo", "Cartero", "Cartógrafo", "Castrador", "Catedrático", "Científico", "Cirujano", "Citólogo", "Climatólogo", "Consejero", "Conserje", "Contador", "Coordinador", "Cosmógrafo", "Cosmólogo", "Criminalista", "Cronólogo", "Decano", "Decorador", "Defensor", "Delegado", "Demógrafo", "Dentista", "Dermatólogo", "Dibujante", "Diseñador", "Directivo", "Director", "Dirigente", "Doctor", "Documentalista", "Ecólogo", "Economista", "Educador", "Enfermero", "Entomólogo", "Epidemiólogo", "Estadista", "Estudiante", "Etimólogo", "Etnógrafo", "Etnólogo", "Examinador", "Farmacéutico", "Farmacólogo", "Filólogo", "Filósofo", "Fiscal", "Físico", "Fisiólogo", "Fisioterapeuta", "Fonetista", "Foníatra", "Fonólogo", "Forense", "Fotógrafo", "Funcionario", "Gemólogo", "Genetista", "Geobotánica", "Geofísico", "Geógrafo", "Geólogo", "Geoquímica", "Gerente", "Gestor", "Grabador", "Grafólogo", "Gramático", "Hematólogo", "Hepatólogo", "Hidrogeólogo", "Hidrógrafo", "Hidrólogo", "Higienista", "Hispanista", "Historiador", "Informático", "Ingeniero", "Inmunólogo", "Inspector", "Interino", "Interventor", "Investigador", "Jardinero", "Juez", "Latinista", "Lexicógrafo", "Lexicólogo", "Lingüista", "Maestro", "Matemático", "Medico", "Meteorólogo", "Micólogo", "Microbiológico", "Microcirujano", "Mineralogista", "Monitor", "Musicólogo", "Naturópata", "Nefrólogo", "Neumólogo", "Neuroanatomista", "Neurobiólogo", "Neurocirujano", "Neuroembriólogo", "Neurofisiólogo", "Neurólogo", "Nutrólogo", "Oceanógrafo", "Odontólogo", "Oficinista", "Oftalmólogo", "Oncólogo", "Óptico", "Optometrista", "Orientador", "Ornitólogo", "Ortopédico", "Ortopedista", "Osteólogo", "Otorrinolaringólogo", "Paleobiólogo", "Paleobotánico", "Paleógrafo", "Paleólogo", "Paleontólogo", "Patólogo", "Pedagogo", "Pediatra", "Periodista", "Perito", "Piloto", "Piscicultor", "Podólogo", "Policía", "Político", "Portero", "Prehistoriador", "Proctólogo", "Profesor", "Programador", "Protésico", "Proveedor", "Psicoanalista", "Psicólogo", "Psicofísico", "Psicopedagogo", "Psicoterapeuta", "Psiquiatra", "Publicista", "Publicitario", "Puericultor", "Químico", "Quiropráctico", "Radioastrónomo", "Radiofonista", "Radiólogo", "Radiotécnico", "Radiotelefonista", "Radiotelegrafista", "Radioterapeuta", "Rector", "Sanitario", "Secretario", "Sexólogo", "Sismólogo", "Sociólogo", "Telefonista", "Teólogo", "Terapeuta", "Tocoginecólogo", "Tocólogo", "Toxicólogo", "Traductor", "Transcriptor", "Traumatólogo", "Tutor", "Urólogo", "Veterinario", "Virólogo", "Viticultor", "Vulcanólogo", "Xilógrafo", "Zoólogo", "Zootécnico"];
 var orientacion = ["Seleccionar", "Heterosexual", "Homosexual", "Bisexual"];
 var usuarios = [];
 var conversacionCompleta = [];
@@ -141,8 +141,6 @@ function accion(){
     }
     document.getElementById("contenido").innerHTML += "<a href=\"#\" class=\"button\" onclick=\"subir();\" > Enviar</a>";
 }
-
-
 function grupoRelacion(valor) {
     tamano = usuarios.length;
     if(tamano > 2) {
@@ -224,17 +222,22 @@ function subir() {
             validaCP(h, false);
     }
     //while (vb) {
-	alert("Sexo de los usuarios: "+ Sexo + "\nEdad de los usuarios: " + Edad + "\nProfesión de los usuarios: " + Profesion + "\nOrientación sexual de los usuarios: " + Orientacion + "\nCódigo porstal de los usuarios: " + Cp + "\nLengua materna de los usuarios: " + Lengua + "\n" + "Escolaridad de los usuarios: " + Escolaridad + "\nRelación de parentesco: " + Parientes);
+	alert("Sexo de los usuarios: "+ Sexo + "\nEdad de los usuarios: " + Edad + "\nProfesión de los usuarios: " + Profesion + "\nOrientación sexual de los usuarios: " + Orientacion + "\nCódigo porstal de los usuarios: " + Cp + "\nLengua materna de los usuarios: " + Lengua + "\n" + "Escolaridad de los usuarios: " + Escolaridad + "\nRelación de parentesco: " + Parientes + "El id de la conversación es: " + aux);
+	
 	alert("Se validarán sus datos");
+	
         //if(magic === usuarios.length){ 
 		//vb = false;
 		//}
 		//vb =false;
     //}
+	/*
     for (i = 0; i < usuarios.length; i++) {
         document.getElementById("userres" + i).value = aux[i];
-    } 
+    } */  //No sé que hace esa linea
     magic = 0;
+	//para validar vacío, no avanza de esta función 
+	/*
     for (i = 0; i < usuarios.length; i++) {
         cadena += $('input[name="userrd' + i + '"]:checked').val() + ";" 
         + document.getElementById("usered" + i).value + ";" 
@@ -249,14 +252,17 @@ function subir() {
             cadena += document.getElementById("userres2" + i).value + ";";
         texto += validaVacio(i);
     }
+	*/
+	//alert("Vacío validado");
+	
     if (texto.length == 0) {
         alert ("Gracias, se enviarán los datos");
         document.getElementById("cara").value = cadena;
+		document.getElementById("cara").value = cadena;
         cadena = "";
         for (i = 0; i < usuarios.length; i++) {
             cadena += conversacion[i] + " @+=; ";
-        }
-        document.getElementById("conv").value = cadena;
+		}
         cadena = "";
         for (i = 0; i < conversacionCompleta.length; i++) {
         if (conversacionCompleta[i].length != 0)
@@ -265,6 +271,30 @@ function subir() {
         document.getElementById("conv2").value = cadena;
         document.getElementById("numero").value = usuarios.length + "";
         document.getElementById("usuarioPersonal").value = usuarioPersonal;
+		
+		//Debug
+		document.getElementById("usuario1").value = usuarios[0];
+		document.getElementById("usuario2").value = usuarios[1];
+		document.getElementById("Sexo1").value = Sexo[0];
+		document.getElementById("Sexo2").value = Sexo[1];
+		document.getElementById("Edad1").value = Edad[0];
+		document.getElementById("Edad2").value = Edad[1];
+		document.getElementById("Profesion1").value = Profesion[0];
+		document.getElementById("Profesion2").value = Profesion[1];
+		document.getElementById("Orientacion1").value = Orientacion[0];
+		document.getElementById("Orientacion2").value = Orientacion[1];
+		document.getElementById("Cp1").value = Cp[0];
+		document.getElementById("Cp2").value = Cp[1];
+		document.getElementById("Lengua1").value = Lengua[0];
+		document.getElementById("Lengua2").value = Lengua[1];
+		document.getElementById("Escolaridad1").value = Escolaridad[0];
+		document.getElementById("Escolaridad2").value = Escolaridad[1];
+		document.getElementById("Parientes1").value = Parientes[0];
+		document.getElementById("Parientes2").value = Parientes[1];
+		document.getElementById("aux").value = aux[0];
+		
+		//Fin Debug
+		
         document.getElementById("todo").submit();
     } else {
         alert(texto);
@@ -364,9 +394,9 @@ function identificarUsuarios(lineas) {
 	cjto.forEach (function(item){
 		usuarios.push(item);
 	});
-	alert("Tamañao del conjunto: "+cjto.size);
+	alert("Tamaño del conjunto: "+cjto.size);
 	//console.log(cjto);
-	alert("Tamaño de usuarios: "+usuarios)
+	alert("Usuarios en el conjunto: "+usuarios)
     return usuarios;
 }
 function generarLlave(){

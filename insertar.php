@@ -1,25 +1,89 @@
-<?php require_once('conn.php'); ?>
 <?php
 //Primero leer numero de registros, dos variables con los id de los usuarios (manejados en memoria) y de la conversacion
+$enlace = mysqli_connect("localhost", "root", "root", "cores");
+//$texto = "Hola Berenice<br>";
+//echo "$texto";
 $numero = intval($_POST["num"]);
 $lista = $_POST["caracteristicas"];
 $persona = intval($_POST["personalUser"]);
 
-mysqli_select_db($enlace,"cores");
+$u1 = $_POST["u1"];
+$u2 = $_POST["u2"];
+$s1 = $_POST["s1"];
+$s2 = $_POST["s2"];
+$e1 = $_POST["e1"];
+$e2 = $_POST["e2"];
+$p1 = $_POST["p1"];
+$p2 = $_POST["p2"];
+$o1 = $_POST["o1"];
+$o2 = $_POST["o2"];
+$c1 = $_POST["c1"];
+$c2 = $_POST["c2"];
+$l1 = $_POST["l1"];
+$l2 = $_POST["l2"];
+$sh1 = $_POST["sh1"];
+$sh2 = $_POST["sh2"];
+$pa1 = $_POST["pa1"];
+$pa2 = $_POST["pa2"];
+$aux = $_POST["aux"];
+
+$u = array($u1,$u2);
+$s = array($s1,$s2);
+$e = array($e1,$e2);
+$p = array($p1,$p2);
+$o = array($o1,$o2);
+$c = array($c1,$c2);
+$l = array($l1,$l2);
+$sh = array($sh1,$sh2);
+$pa = array($pa1,$pa2);
+
+echo "el id de conversación es: $aux<br>";
+
+for($i=0;$i<2;$i++){
+	echo "el usuario  $i  es:  $u[$i]<br>"; 
+	echo "su sexo es: $s[$i]<br>";
+	echo "su edad es: $e[$i]<br>";
+	echo "su profesion es: $p[$i]<br>";
+	echo "su orientación es: $o[$i]<br>";
+	echo "su CP es: $c[$i]<br>";
+	echo "su lengua es: $l[$i]<br>";
+	echo "su escolaridad es: $sh[$i]<br>";
+	echo "su parientesco es: $pa[$i]<br>";
+	echo "<br><br>";
+}
+
+if (!$enlace) {
+	echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+    echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+    echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+    exit;
+}
+
+//echo "el número es: $numero <br>";
+//echo "La lista es:  $lista <br>";
+//echo "La persona es: $persona <br>";
+//echo "El usuario uno es: $u1 <br>";
+//echo "El usuario dos es: $u[1]<br>";
+
 $resultado = mysqli_query($enlace,"SELECT * FROM persona");
+echo "El resultado1 es: $resultado <br>";
 $id_usuario = mysqli_num_rows($resultado) + 1;
 $resultado = mysqli_query($enlace,"SELECT * FROM conversacion");
+echo "El resultado2 es: $resultado <br>";
 $id_conversacion = mysqli_num_rows($resultado) + 1;
 
-$texto = str_replace("'", "\'", $_POST["conversacion3"]);
-$texto = str_replace("\"", "\\\"", $texto);
-
+//$texto = str_replace("'", "\'", $_POST["conversacion3"]);
+//$texto = str_replace("\"", "\\\"", $texto);
+$texto = "Hola Berenice";
 mysqli_query("SET NAMES utf8");
 
-$query = "INSERT INTO conversacion (idCONVERSACION, Conversacion) VALUES(" . $id_conversacion . ", '" . $texto . "');";
+echo "Texto es: $texto <br>";
+//debbug
+
+$query = "INSERT INTO conversacion (idCONVERSACION, Conversacion) VALUES(" . $id_conversacion . ", '" . $texto . "')";
 $retval = mysqli_query($enlace,$query);
    
-   if(! $retval )
+   if(!$retval )
    {
       die('Could not enter data: ' . mysqli_error());
    }
